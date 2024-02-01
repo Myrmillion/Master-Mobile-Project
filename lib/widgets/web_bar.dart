@@ -26,11 +26,11 @@ class WebBar extends PreferredSize {
               ],
             ),
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(opacity),
+              color: Colors.white,
               border: Border(
                 bottom: BorderSide(
                   color: Colors.red.withOpacity(opacity),
-                  width: 2.0,
+                  width: 3.0,
                 ),
               ),
             ),

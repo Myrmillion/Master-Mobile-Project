@@ -13,7 +13,7 @@ class PhoneBar extends AppBar {
           shape: Border(
             bottom: BorderSide(
               color: Colors.red.withOpacity(opacity),
-              width: 2.0,
+              width: 3.0,
             ),
           ),
         );

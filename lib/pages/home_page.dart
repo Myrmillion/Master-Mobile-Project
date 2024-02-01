@@ -37,8 +37,10 @@ class HomeState extends State<HomePage> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     ScreenSize screenSize = MakeItResponsive().getScreenSize(context);
-    double opacity = MakeItResponsive()
-        .getScrollingOpacity(_currentUserPosition, size.height);
+    double opacity = MakeItResponsive().getScrollingOpacity(
+      _currentUserPosition,
+      size.height,
+    );
     return Scaffold(
       extendBodyBehindAppBar: true,
       drawer: DrawerSmall(),

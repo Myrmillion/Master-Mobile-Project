@@ -6,7 +6,7 @@ class ContainerTextAndImage extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      height: size.height / 2,
+      height: size.height / 2.5,
       width: size.width,
       child: Center(
         child: Container(

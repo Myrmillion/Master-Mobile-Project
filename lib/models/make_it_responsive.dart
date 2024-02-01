@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 
+enum ScreenSize { small, medium, large }
+
 class MakeItResponsive {
   double minPoint = 640;
   double maxPoint = 1000;
 
   ScreenSize getScreenSize(BuildContext context) {
     final size = MediaQuery.of(context).size;
+
     if (size.width > maxPoint) {
       return ScreenSize.large;
     } else if (size.width < minPoint) {
@@ -17,16 +20,22 @@ class MakeItResponsive {
 
   Widget responsiveRows(List<Widget> widgets, ScreenSize screenSize) {
     int maxItems = 0;
-    if (screenSize == ScreenSize.small) {
-      maxItems = 2;
-    } else if (screenSize == ScreenSize.medium) {
-      maxItems = 3;
-    } else {
-      maxItems = 4;
+
+    switch (screenSize) {
+      case ScreenSize.small:
+        maxItems = 2;
+        break;
+      case ScreenSize.medium:
+        maxItems = 3;
+        break;
+      case ScreenSize.large:
+        maxItems = 4;
+        break;
     }
 
     List<List<Widget>> parsedList = toArrays(widgets, maxItems);
     List<Column> columns = parsedList.map((e) => Column(children: e)).toList();
+
     return Row(
       children: columns,
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -35,18 +44,13 @@ class MakeItResponsive {
   }
 
   List<List<Widget>> toArrays(List<Widget> widgets, int maxItems) {
-    //Creer list vide
     List<List<Widget>> newList = [];
-
-    //index
     int index = 0;
 
-    //Creer des Lists vides correspondant au max
     for (int i = 0; i < maxItems; i++) {
       newList.add([]);
     }
 
-    //Passe a travers list de base et peupler nouvelle
     for (int i = 0; i < widgets.length; i++) {
       if (index >= maxItems) {
         index = 0;
@@ -56,6 +60,7 @@ class MakeItResponsive {
       newList[index] = currentList;
       index++;
     }
+
     return newList;
   }
 
@@ -80,5 +85,3 @@ class MakeItResponsive {
     }
   }
 }
-
-enum ScreenSize { small, medium, large }
