@@ -15,31 +15,48 @@ dependencies:
   carousel_slider: ^4.0.0
 
   cupertino_icons: ^1.0.2
+  icons_launcher: ^2.1.7
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+# From the public domain image: https://www.rawpixel.com/image/10166447/psd-cow-art-cartoon
+icons_launcher:
+  platforms:
+    android:
+      enable: true
+      image_path: 'assets/img/icon/icon.png'
+      adaptive_background_color: '#f6f6f4'
+      adaptive_foreground_image: 'assets/img/icon/foreground.png'
+    ios:
+      enable: true
+      image_path: 'assets/img/icon/icon.png'
+    web:
+      enable: true
+      image_path: 'assets/img/icon/icon.png'
+      favicon_path: 'assets/img/icon/foreground.png'
 
 flutter:
 
   uses-material-design: true
 
   assets:
-    - images/bday.jpg
-    - images/brownie.jpg
-    - images/cheesecake.jpg
-    - images/choco.jpg
-    - images/cupcake.jpg
-    - images/donuts.jpg
-    - images/tiramisu.jpg
-    - images/wedding.jpg
-    - images/cupcake.png
-    - images/home.jpg
-    - images/athena.jpeg
-    - images/please.jpg
-    - images/flowers.jpg
-    - images/leche.jpg
-    - images/babines.jpg
-    - images/dog.jpg
-    - images/grumpy.png
-    - images/mouth.jpg
+    - assets/img/content/bday.jpg
+    - assets/img/content/brownie.jpg
+    - assets/img/content/cheesecake.jpg
+    - assets/img/content/choco.jpg
+    - assets/img/content/cupcake.jpg
+    - assets/img/content/donuts.jpg
+    - assets/img/content/tiramisu.jpg
+    - assets/img/content/wedding.jpg
+    - assets/img/content/cupcake.png
+    - assets/img/content/home.jpg
+    - assets/img/content/athena.jpeg
+    - assets/img/content/please.jpg
+    - assets/img/content/flowers.jpg
+    - assets/img/content/leche.jpg
+    - assets/img/content/babines.jpg
+    - assets/img/content/dog.jpg
+    - assets/img/content/grumpy.png
+    - assets/img/content/mouth.jpg
