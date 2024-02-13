@@ -1,12 +1,12 @@
 //ImagePath
 
 import 'package:flutter/material.dart';
-import 'package:la_cuisine_dathena/models/button_object.dart';
-import 'package:la_cuisine_dathena/models/review.dart';
-import 'package:la_cuisine_dathena/models/url_class.dart';
-import 'package:la_cuisine_dathena/pages/next_page.dart';
-import 'package:la_cuisine_dathena/widgets/hover_button.dart';
-import 'package:la_cuisine_dathena/widgets/url_button.dart';
+import 'package:neuchatel_birds/models/button_object.dart';
+import 'package:neuchatel_birds/models/review.dart';
+import 'package:neuchatel_birds/models/url_class.dart';
+import 'package:neuchatel_birds/pages/next_page.dart';
+import 'package:neuchatel_birds/widgets/hover_button.dart';
+import 'package:neuchatel_birds/widgets/url_button.dart';
 
 String birthdayImage = "images/bday.jpg";
 String brownieImage = "images/brownie.jpg";

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:la_cuisine_dathena/pages/home_page.dart';
+import 'package:neuchatel_birds/pages/home_page.dart';
 
 void main() {
   runApp(MyApp());

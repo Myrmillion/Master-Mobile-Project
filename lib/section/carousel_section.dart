@@ -1,9 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:la_cuisine_dathena/constants.dart';
-import 'package:la_cuisine_dathena/models/carousel_image.dart';
-import 'package:la_cuisine_dathena/models/make_it_responsive.dart';
-import 'package:la_cuisine_dathena/widgets/title_text.dart';
+import 'package:neuchatel_birds/constants.dart';
+import 'package:neuchatel_birds/models/carousel_image.dart';
+import 'package:neuchatel_birds/models/make_it_responsive.dart';
+import 'package:neuchatel_birds/widgets/title_text.dart';
 
 class CarouselSection extends StatefulWidget {
   @override

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:la_cuisine_dathena/models/url_class.dart';
+import 'package:neuchatel_birds/models/url_class.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class UrlButton extends StatelessWidget {

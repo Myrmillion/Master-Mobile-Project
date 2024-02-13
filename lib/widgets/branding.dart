@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:la_cuisine_dathena/constants.dart';
-import 'package:la_cuisine_dathena/widgets/title_text.dart';
+import 'package:neuchatel_birds/constants.dart';
+import 'package:neuchatel_birds/widgets/title_text.dart';
 
 class Branding extends StatelessWidget {
   @override

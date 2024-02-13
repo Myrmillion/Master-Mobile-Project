@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:la_cuisine_dathena/constants.dart';
-import 'package:la_cuisine_dathena/models/review.dart';
+import 'package:neuchatel_birds/constants.dart';
+import 'package:neuchatel_birds/models/review.dart';
 
 class ReviewCard extends StatefulWidget {
   final Size cardSize;
@@ -43,7 +43,7 @@ class RCState extends State<ReviewCard> {
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
-              Text(widget.review.comment)
+              Expanded(child: Text(widget.review.comment))
             ],
           ),
         ),

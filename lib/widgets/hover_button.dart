@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:la_cuisine_dathena/models/button_object.dart';
+import 'package:neuchatel_birds/models/button_object.dart';
 
 class HoverButton extends StatefulWidget {
   final ButtonObject button;

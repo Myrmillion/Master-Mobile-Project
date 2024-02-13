@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:la_cuisine_dathena/models/occasion.dart';
+import 'package:neuchatel_birds/models/occasion.dart';
 
 class OccasionWidget extends StatefulWidget {
   final Size size;

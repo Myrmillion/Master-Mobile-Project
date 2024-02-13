@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:la_cuisine_dathena/constants.dart';
-import 'package:la_cuisine_dathena/models/make_it_responsive.dart';
-import 'package:la_cuisine_dathena/models/review.dart';
-import 'package:la_cuisine_dathena/widgets/review_card.dart';
-import 'package:la_cuisine_dathena/widgets/title_text.dart';
+import 'package:neuchatel_birds/constants.dart';
+import 'package:neuchatel_birds/models/make_it_responsive.dart';
+import 'package:neuchatel_birds/models/review.dart';
+import 'package:neuchatel_birds/widgets/review_card.dart';
+import 'package:neuchatel_birds/widgets/title_text.dart';
 
 class ReviewSection extends StatefulWidget {
   @override

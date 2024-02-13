@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:la_cuisine_dathena/constants.dart';
-import 'package:la_cuisine_dathena/models/button_object.dart';
-import 'package:la_cuisine_dathena/widgets/branding.dart';
+import 'package:neuchatel_birds/constants.dart';
+import 'package:neuchatel_birds/models/button_object.dart';
+import 'package:neuchatel_birds/widgets/branding.dart';
 
 class DrawerSmall extends StatelessWidget {
   @override

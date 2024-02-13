@@ -1,4 +1,4 @@
-package com.codabee.la_cuisine_dathena
+package ch.hearc.assistanat.neuchatelbirds
 
 import io.flutter.embedding.android.FlutterActivity
 

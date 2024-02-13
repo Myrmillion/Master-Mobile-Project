@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:la_cuisine_dathena/models/make_it_responsive.dart';
-import 'package:la_cuisine_dathena/widgets/phone_bar.dart';
-import 'package:la_cuisine_dathena/widgets/web_bar.dart';
+import 'package:neuchatel_birds/models/make_it_responsive.dart';
+import 'package:neuchatel_birds/widgets/phone_bar.dart';
+import 'package:neuchatel_birds/widgets/web_bar.dart';
 
 class NextPage extends StatelessWidget {
   @override

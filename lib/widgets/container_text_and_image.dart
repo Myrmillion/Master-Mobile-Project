@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:la_cuisine_dathena/constants.dart';
+import 'package:neuchatel_birds/constants.dart';
 
 class ContainerTextAndImage extends StatelessWidget {
   @override

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:la_cuisine_dathena/widgets/branding.dart';
+import 'package:neuchatel_birds/widgets/branding.dart';
 
 class PhoneBar extends AppBar {
   final double opacity;

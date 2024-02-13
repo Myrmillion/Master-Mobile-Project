@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:la_cuisine_dathena/constants.dart';
-import 'package:la_cuisine_dathena/models/make_it_responsive.dart';
-import 'package:la_cuisine_dathena/models/occasion.dart';
-import 'package:la_cuisine_dathena/widgets/occasion_widget.dart';
-import 'package:la_cuisine_dathena/widgets/title_text.dart';
+import 'package:neuchatel_birds/constants.dart';
+import 'package:neuchatel_birds/models/make_it_responsive.dart';
+import 'package:neuchatel_birds/models/occasion.dart';
+import 'package:neuchatel_birds/widgets/occasion_widget.dart';
+import 'package:neuchatel_birds/widgets/title_text.dart';
 
 class OccasionSection extends StatelessWidget {
   final List<Occasion> occasions = [

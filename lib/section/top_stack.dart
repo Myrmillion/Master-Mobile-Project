@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:la_cuisine_dathena/widgets/container_button.dart';
-import 'package:la_cuisine_dathena/widgets/container_text_and_image.dart';
+import 'package:neuchatel_birds/widgets/container_button.dart';
+import 'package:neuchatel_birds/widgets/container_text_and_image.dart';
 
 class TopStack extends StatelessWidget {
   @override

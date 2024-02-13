@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:la_cuisine_dathena/constants.dart';
-import 'package:la_cuisine_dathena/models/make_it_responsive.dart';
+import 'package:neuchatel_birds/constants.dart';
+import 'package:neuchatel_birds/models/make_it_responsive.dart';
 
 class ContainerButton extends StatelessWidget {
   @override

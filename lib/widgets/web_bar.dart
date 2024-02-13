@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:la_cuisine_dathena/constants.dart';
-import 'package:la_cuisine_dathena/models/button_object.dart';
-import 'package:la_cuisine_dathena/pages/next_page.dart';
-import 'package:la_cuisine_dathena/widgets/branding.dart';
-import 'package:la_cuisine_dathena/widgets/hover_button.dart';
+import 'package:neuchatel_birds/constants.dart';
+import 'package:neuchatel_birds/models/button_object.dart';
+import 'package:neuchatel_birds/pages/next_page.dart';
+import 'package:neuchatel_birds/widgets/branding.dart';
+import 'package:neuchatel_birds/widgets/hover_button.dart';
 
 class WebBar extends PreferredSize {
   final Size size;

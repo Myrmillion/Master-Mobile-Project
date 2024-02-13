@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.codabee.la_cuisine_dathena">
+    package="ch.hearc.assistanat.neuchatelbirds">
    <application
-        android:label="la_cuisine_dathena"
+        android:label="Oiseaux de Neuchâtel"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

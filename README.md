@@ -1,6 +1,6 @@
-# la_cuisine_dathena
+# Neuchatel Birds
 
-A new Flutter application.
+A simple sample app about birds in Neuchatel, to show the usage of Flutter Web.
 
 ## Getting Started
 

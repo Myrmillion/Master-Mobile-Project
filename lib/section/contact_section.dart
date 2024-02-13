@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:la_cuisine_dathena/constants.dart';
-import 'package:la_cuisine_dathena/widgets/title_text.dart';
+import 'package:neuchatel_birds/constants.dart';
+import 'package:neuchatel_birds/widgets/title_text.dart';
 
 class ContactSection extends StatelessWidget {
   @override
@@ -12,7 +12,6 @@ class ContactSection extends StatelessWidget {
       padding: EdgeInsets.all(30),
       child: Column(
         mainAxisSize: MainAxisSize.max,
-
         children: [
           TitleText(string: "Contact:"),
           Row(
@@ -25,10 +24,10 @@ class ContactSection extends StatelessWidget {
                 children: [
                   Text("Contactez nous"),
                   TextButton(onPressed: null, child: Text("Tel: 06.43.13.21")),
-                  TextButton(onPressed: null, child: Text("mail: athena@codabee.com"))
+                  TextButton(
+                      onPressed: null, child: Text("mail: athena@codabee.com"))
                 ],
               )
-
             ],
           ),
         ],
