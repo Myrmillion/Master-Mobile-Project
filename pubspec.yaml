@@ -35,7 +35,7 @@ icons_launcher:
     web:
       enable: true
       image_path: 'assets/img/icon/icon.png'
-      favicon_path: 'assets/img/icon/foreground.png'
+      favicon_path: 'assets/img/icon/favicon.png'
 
 flutter:
 
