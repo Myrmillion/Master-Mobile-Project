@@ -1,7 +1,7 @@
 {
     "name": "Oiseaux de Neuchâtel",
     "short_name": "Oiseaux de Neuchâtel",
-    "start_url": "https://myrmillion.github.io",
+    "start_url": "https://myrmillion.github.io/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#ffffff",

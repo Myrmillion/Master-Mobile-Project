@@ -34,7 +34,7 @@ icons_launcher:
       image_path: "assets/img/icon/fore-lg.png"
     web:
       enable: true
-      image_path: "assets/img/icon/fore-md.png"
+      image_path: "assets/img/icon/fore-md_bg.png"
       favicon_path: "assets/img/icon/fore-lg.png"
 
 flutter:
