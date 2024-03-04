@@ -13,7 +13,7 @@ class AboutMeSection extends StatelessWidget {
         children: [
           Align(
             alignment: Alignment.centerLeft,
-            child: TitleText(string: "À propos de moi :"),
+            child: TitleText("À propos de moi :"),
           ),
           const SizedBox(height: 7.5),
           Row(

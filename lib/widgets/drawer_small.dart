@@ -35,7 +35,7 @@ class DrawerSmall extends StatelessWidget {
         },
         separatorBuilder: (_, index) {
           if (index == 0) {
-            return Divider(thickness: 2.0, height: 0, color: Colors.red);
+            return Divider(thickness: 2.0, height: 0, color: titleColor);
           } else {
             return Divider(height: 0);
           }

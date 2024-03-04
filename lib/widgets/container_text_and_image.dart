@@ -14,8 +14,7 @@ class ContainerTextAndImage extends StatelessWidget {
           child: Text(
             "Les oiseaux de nos régions",
             style: TextStyle(
-              color: Colors.red,
-              fontSize: 30,
+              fontSize: 34.0,
               fontStyle: FontStyle.italic,
               fontWeight: FontWeight.bold,
             ),

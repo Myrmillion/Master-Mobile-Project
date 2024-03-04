@@ -8,9 +8,9 @@ class Branding extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        TitleText(string: "Oiseaux de Neuchâtel"),
-        const SizedBox(width: 5.0),
-        Image.asset(logo, height: 35, width: 35)
+        TitleText("Oiseaux de Neuchâtel"),
+        const SizedBox(width: 10.0),
+        Image.asset(logo, height: 50, width: 50)
       ],
     );
   }

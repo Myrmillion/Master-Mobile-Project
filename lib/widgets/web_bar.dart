@@ -28,7 +28,7 @@ class WebBar extends PreferredSize {
               color: Colors.white,
               border: Border(
                 bottom: BorderSide(
-                  color: Colors.red.withOpacity(opacity),
+                  color: titleColor.withOpacity(opacity),
                   width: 3.0,
                 ),
               ),

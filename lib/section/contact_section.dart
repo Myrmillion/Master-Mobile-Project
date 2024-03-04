@@ -9,14 +9,14 @@ class ContactSection extends StatelessWidget {
     return Container(
       color: Colors.grey.shade200,
       width: size.width,
-      padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 25.0),
+      padding: EdgeInsets.symmetric(vertical: 20.0),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
-          TitleText(string: "Nous retrouvez :"),
+          TitleText("Nous retrouvez :"),
           const SizedBox(height: 20.0),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Column(

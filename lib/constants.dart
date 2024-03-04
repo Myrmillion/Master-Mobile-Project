@@ -6,6 +6,11 @@ import 'package:neuchatel_birds/models/review.dart';
 import 'package:neuchatel_birds/pages/next_page.dart';
 import 'package:neuchatel_birds/widgets/hover_button.dart';
 
+// Colors
+
+Color titleColor = Color.fromARGB(255, 244, 124, 31);
+
+// Images
 String logo = "assets/img/content/logo.png";
 String back = "assets/img/content/back.jpg";
 

@@ -23,7 +23,7 @@ class HoverState extends State<HoverButton> {
               widget.button.text,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: (hoverValue) ? Colors.grey : Colors.red,
+                color: (hoverValue) ? Colors.grey : Colors.black,
               ),
             ),
             Container(

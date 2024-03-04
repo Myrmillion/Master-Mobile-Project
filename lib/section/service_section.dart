@@ -22,7 +22,7 @@ class ServiceSection extends StatelessWidget {
         children: [
           Align(
             alignment: Alignment.centerLeft,
-            child: TitleText(string: "Nos prestations :"),
+            child: TitleText("Nos prestations :"),
           ),
           const SizedBox(height: 15.0),
           if (screenSize == ScreenSize.phone) ...[

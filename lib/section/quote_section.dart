@@ -22,7 +22,10 @@ class QuoteSection extends StatelessWidget {
               Row(
                 children: [
                   Expanded(child: Container()),
-                  TitleText(string: author)
+                  TitleText(
+                    author,
+                    fontStyle: FontStyle.italic,
+                  )
                 ],
               )
             ],

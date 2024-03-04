@@ -67,9 +67,9 @@ class CarouselState extends State<CarouselSection> {
         children: [
           Align(
             alignment: Alignment.centerLeft,
-            child: TitleText(string: "Le Carousel des oiseaux :"),
+            child: TitleText("Le Carousel des oiseaux :"),
           ),
-          const SizedBox(height: 7.5),
+          const SizedBox(height: 10.0),
           CarouselSlider(
             items: items,
             options: options,

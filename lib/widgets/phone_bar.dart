@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:neuchatel_birds/constants.dart';
 import 'package:neuchatel_birds/widgets/branding.dart';
 
 class PhoneBar extends AppBar {
@@ -12,7 +13,7 @@ class PhoneBar extends AppBar {
           scrolledUnderElevation: 0.0,
           shape: Border(
             bottom: BorderSide(
-              color: Colors.red.withOpacity(opacity),
+              color: titleColor.withOpacity(opacity),
               width: 3.0,
             ),
           ),

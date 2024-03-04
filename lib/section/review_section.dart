@@ -27,7 +27,7 @@ class HelpState extends State<HelpSection> {
         children: [
           Align(
             alignment: Alignment.centerLeft,
-            child: TitleText(string: "Ils nous aident :"),
+            child: TitleText("Ils nous aident :"),
           ),
           const SizedBox(height: 7.5),
           MakeItResponsive.responsiveRows(context, cards)
