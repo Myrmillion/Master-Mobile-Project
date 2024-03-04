@@ -41,21 +41,4 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/img/content/bday.jpg
-    - assets/img/content/brownie.jpg
-    - assets/img/content/cheesecake.jpg
-    - assets/img/content/choco.jpg
-    - assets/img/content/cupcake.jpg
-    - assets/img/content/donuts.jpg
-    - assets/img/content/tiramisu.jpg
-    - assets/img/content/wedding.jpg
-    - assets/img/content/cupcake.png
-    - assets/img/content/home.jpg
-    - assets/img/content/athena.jpeg
-    - assets/img/content/please.jpg
-    - assets/img/content/flowers.jpg
-    - assets/img/content/leche.jpg
-    - assets/img/content/babines.jpg
-    - assets/img/content/dog.jpg
-    - assets/img/content/grumpy.png
-    - assets/img/content/mouth.jpg
+    - assets/img/content/

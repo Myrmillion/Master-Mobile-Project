@@ -5,12 +5,13 @@ import 'package:neuchatel_birds/models/make_it_responsive.dart';
 class ContainerButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    ScreenSize screenSize = MakeItResponsive().getScreenSize(context);
+    ScreenSize screenSize = MakeItResponsive.getScreenSize(context);
     Size size = MediaQuery.of(context).size;
     return Center(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: size.width / 7),
-        child: (screenSize == ScreenSize.small) ? small() : big(),
+        padding:
+            EdgeInsets.symmetric(horizontal: size.width / 7, vertical: 10.0),
+        child: (screenSize == ScreenSize.phone) ? small() : big(),
       ),
     );
   }

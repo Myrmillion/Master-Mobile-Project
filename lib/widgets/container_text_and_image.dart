@@ -12,7 +12,7 @@ class ContainerTextAndImage extends StatelessWidget {
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 2.5),
           child: Text(
-            "Des gâteaux pour les gourmants à 4 pattes",
+            "Les oiseaux de nos régions",
             style: TextStyle(
               color: Colors.red,
               fontSize: 30,
@@ -29,7 +29,7 @@ class ContainerTextAndImage extends StatelessWidget {
       ),
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: Image.asset(homeImage).image,
+          image: Image.asset(back).image,
           fit: BoxFit.cover,
         ),
       ),

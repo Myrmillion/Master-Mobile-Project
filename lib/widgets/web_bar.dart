@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:neuchatel_birds/constants.dart';
 import 'package:neuchatel_birds/models/button_object.dart';
 import 'package:neuchatel_birds/pages/next_page.dart';

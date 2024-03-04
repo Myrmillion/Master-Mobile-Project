@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:neuchatel_birds/constants.dart';
 import 'package:neuchatel_birds/models/review.dart';
 
-class ReviewCard extends StatefulWidget {
+class HelpCard extends StatefulWidget {
   final Size cardSize;
-  final Review review;
+  final Help review;
 
-  ReviewCard({required this.review, required this.cardSize});
+  HelpCard({required this.review, required this.cardSize});
 
   @override
   createState() => RCState();
 }
 
-class RCState extends State<ReviewCard> {
+class RCState extends State<HelpCard> {
   bool isHover = false;
 
   @override
@@ -21,20 +20,22 @@ class RCState extends State<ReviewCard> {
       onTap: () {
         // print("Tapped");
       },
-      onHover: (value) {
-        setState(() => isHover = value);
-      },
+      onHover: (value) => setState(() => isHover = value),
       child: Container(
-        height: widget.cardSize.height,
-        width: (isHover) ? widget.cardSize.width + 30 : widget.cardSize.width,
+        constraints: BoxConstraints(minHeight: 325.0),
+        width: (isHover) ? widget.cardSize.width + 10 : widget.cardSize.width,
         child: Card(
-          elevation: (isHover) ? 7 : 0,
-          color: pinkColor,
-          child: Column(
-            children: [
-              Text(widget.review.name),
-              Expanded(
-                child: ClipRRect(
+          elevation: (isHover) ? 2.0 : 1.0,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                Text(
+                  widget.review.name,
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 5.0),
+                ClipRRect(
                   child: Image.asset(
                     widget.review.image,
                     fit: BoxFit.cover,
@@ -42,9 +43,10 @@ class RCState extends State<ReviewCard> {
                   ),
                   borderRadius: BorderRadius.circular(20),
                 ),
-              ),
-              Expanded(child: Text(widget.review.comment))
-            ],
+                const SizedBox(height: 10.0),
+                Text(widget.review.comment, textAlign: TextAlign.center),
+              ],
+            ),
           ),
         ),
       ),

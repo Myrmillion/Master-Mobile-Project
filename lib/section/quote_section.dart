@@ -9,29 +9,26 @@ class QuoteSection extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       padding: EdgeInsets.all(40),
       child: Card(
-          color: pinkColor,
-          elevation: 7,
-          child: Padding(
-            padding: EdgeInsets.all(20),
-            child: Column(children: [
+        elevation: 2.0,
+        child: Padding(
+          padding: EdgeInsets.all(20),
+          child: Column(
+            children: [
               Text(
                 quote,
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.grey.shade700,
-                  fontSize: 25,
-                  fontStyle: FontStyle.italic,
-                ),
+                style: TextStyle(fontSize: 25, fontStyle: FontStyle.italic),
               ),
-              Divider(),
               Row(
                 children: [
                   Expanded(child: Container()),
                   TitleText(string: author)
                 ],
               )
-            ]),
-          )),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

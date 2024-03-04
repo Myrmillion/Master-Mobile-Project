@@ -15,13 +15,12 @@ class CarouselState extends State<CarouselSection> {
 
   CarouselController _carouselController = CarouselController();
   List<CarouselImage> images = [
-    CarouselImage(name: "Brownies", path: brownieImage),
-    CarouselImage(name: "Cheesecake", path: cheesecakeImage),
-    CarouselImage(name: "Gateau au choco", path: chocoImage),
-    CarouselImage(name: "Cupcake", path: cupcakeImage),
-    CarouselImage(name: "Donuts", path: donutsImage),
-    CarouselImage(name: "Tiramisu", path: tiramisuImage),
-    CarouselImage(name: "wedding", path: weddingImage),
+    CarouselImage(name: "Busard", path: busard),
+    CarouselImage(name: "Faucon", path: crecerelle),
+    CarouselImage(name: "Grand Tétras", path: tetras),
+    CarouselImage(name: "Martin-pêcheur", path: martin),
+    CarouselImage(name: "Pic noir", path: pic),
+    CarouselImage(name: "Merle", path: merle),
   ];
 
   Widget _card(CarouselImage image) {
@@ -55,19 +54,20 @@ class CarouselState extends State<CarouselSection> {
   @override
   Widget build(BuildContext context) {
     final items = images.map((e) => _card(e)).toList();
-    ScreenSize screenSize = MakeItResponsive().getScreenSize(context);
-    CarouselOptions options = CarouselOptions(
-        autoPlay: true,
-        aspectRatio: 16 / 9,
-        enlargeCenterPage: true,
-        onPageChanged: (newIndex, _) => setState(() => index = newIndex));
+    final screenSize = MakeItResponsive.getScreenSize(context);
+    final options = CarouselOptions(
+      autoPlay: true,
+      height: screenSize == ScreenSize.phone ? 250 : 400,
+      enlargeCenterPage: true,
+      onPageChanged: (newIndex, _) => setState(() => index = newIndex),
+    );
     return Container(
       padding: EdgeInsets.all(30),
       child: Column(
         children: [
           Align(
             alignment: Alignment.centerLeft,
-            child: TitleText(string: "Le Carousel de gateaux:"),
+            child: TitleText(string: "Le Carousel des oiseaux :"),
           ),
           const SizedBox(height: 7.5),
           CarouselSlider(
@@ -76,8 +76,7 @@ class CarouselState extends State<CarouselSection> {
             carouselController: _carouselController,
           ),
           Card(
-            color: pinkColor,
-            elevation: 5,
+            elevation: 2.0,
             child: Padding(
               padding: EdgeInsets.only(top: 10, bottom: 10),
               child: Row(
@@ -94,9 +93,9 @@ class CarouselState extends State<CarouselSection> {
                               vertical: 5.0,
                             ),
                             child: Text(
-                              (screenSize != ScreenSize.small)
+                              (screenSize != ScreenSize.phone)
                                   ? images[i].name
-                                  : i.toString(),
+                                  : (i + 1).toString(),
                             ),
                           ),
                           onTap: () => _carouselController.animateToPage(i),

@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:neuchatel_birds/models/url_class.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class UrlButton extends StatelessWidget {
-  final UrlClass urlClass;
+  UrlButton({required this.name, required this.url});
 
-  UrlButton({required this.urlClass});
+  final String name;
+  final String url;
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(onPressed: launch, child: Text(urlClass.name));
+    return TextButton(onPressed: launch, child: Text(name));
   }
 
   launch() async {
-    if (!await launchUrl(Uri.parse(urlClass.url))) {
-      throw 'Impossible de lancer ${urlClass.name}';
+    if (!await launchUrl(Uri.parse(url))) {
+      throw 'Impossible de lancer $name';
     }
   }
 }

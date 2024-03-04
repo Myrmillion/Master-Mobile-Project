@@ -1,40 +1,45 @@
 import 'package:flutter/material.dart';
 
-enum ScreenSize { small, medium, large }
+enum ScreenSize { phone, tablet, desktop }
 
 class MakeItResponsive {
-  double minPoint = 640;
-  double maxPoint = 1000;
+  // Attributes
 
-  ScreenSize getScreenSize(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+  // Based on Bootstrap responsive breakpoints: https://kinsta.com/blog/responsive-web-design/
+  static double minPoint = 768;
+  static double maxPoint = 992;
 
-    if (size.width > maxPoint) {
-      return ScreenSize.large;
-    } else if (size.width < minPoint) {
-      return ScreenSize.small;
+  // Methods
+
+  static ScreenSize getScreenSize(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    if (width < minPoint) {
+      return ScreenSize.phone;
+    } else if (width < maxPoint) {
+      return ScreenSize.tablet;
     } else {
-      return ScreenSize.medium;
+      return ScreenSize.desktop;
     }
   }
 
-  Widget responsiveRows(List<Widget> widgets, ScreenSize screenSize) {
+  static Widget responsiveRows(BuildContext context, List<Widget> widgets) {
+    final screenSize = getScreenSize(context);
     int maxItems = 0;
 
     switch (screenSize) {
-      case ScreenSize.small:
+      case ScreenSize.phone:
         maxItems = 2;
         break;
-      case ScreenSize.medium:
+      case ScreenSize.tablet:
         maxItems = 3;
         break;
-      case ScreenSize.large:
+      case ScreenSize.desktop:
         maxItems = 4;
         break;
     }
 
-    List<List<Widget>> parsedList = toArrays(widgets, maxItems);
-    List<Column> columns = parsedList.map((e) => Column(children: e)).toList();
+    final parsedList = _toArrays(widgets, maxItems);
+    final columns = parsedList.map((e) => Column(children: e)).toList();
 
     return Row(
       children: columns,
@@ -43,7 +48,7 @@ class MakeItResponsive {
     );
   }
 
-  List<List<Widget>> toArrays(List<Widget> widgets, int maxItems) {
+  static List<List<Widget>> _toArrays(List<Widget> widgets, int maxItems) {
     List<List<Widget>> newList = [];
     int index = 0;
 
@@ -64,24 +69,20 @@ class MakeItResponsive {
     return newList;
   }
 
-  double getRatio(BuildContext context) {
-    ScreenSize screenSize = getScreenSize(context);
+  static double getRatio(BuildContext context) {
+    final screenSize = getScreenSize(context);
     switch (screenSize) {
-      case ScreenSize.small:
+      case ScreenSize.phone:
         return 0.4;
-      case ScreenSize.medium:
+      case ScreenSize.tablet:
         return 0.25;
-      case ScreenSize.large:
+      case ScreenSize.desktop:
         return 0.2;
     }
   }
 
-  double getScrollingOpacity(double userPosition, double screenHeight) {
-    double shouldBeOpaque = (screenHeight / 2);
-    if (shouldBeOpaque <= userPosition) {
-      return 1;
-    } else {
-      return userPosition / shouldBeOpaque;
-    }
+  static double getScrollingOpacity(double userPosition, double screenHeight) {
+    final isOpaque = (screenHeight / 2);
+    return isOpaque <= userPosition ? 1 : userPosition / isOpaque;
   }
 }

@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Oiseaux de Neuchâtel',
-      theme: ThemeData(primaryColor: Color(0xFFF6F6F4)),
+      theme: ThemeData(primaryColor: Color.fromARGB(255, 0, 201, 201)),
       home: HomePage(),
     );
   }

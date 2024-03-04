@@ -9,34 +9,36 @@ class AboutMeSection extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(30),
       width: size.width,
-      color: pinkColor,
       child: Column(
         children: [
           Align(
             alignment: Alignment.centerLeft,
-            child: TitleText(string: "A propos de Moi:"),
+            child: TitleText(string: "À propos de moi :"),
           ),
           const SizedBox(height: 7.5),
-          Align(
-            alignment: Alignment.centerRight,
-            child: SizedBox(
-              height: size.height / 6,
-              width: size.height / 6,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(size.height / 6),
-                child: Image.asset(
-                  athenaImage,
-                  fit: BoxFit.cover,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Expanded(
+                child: Text(
+                  aboutMe,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontWeight: FontWeight.w700, fontSize: 17),
                 ),
               ),
-            ),
+              Align(
+                alignment: Alignment.centerRight,
+                child: SizedBox(
+                  height: size.height / 6,
+                  width: size.height / 6,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(size.height / 6),
+                    child: Image.asset(me, fit: BoxFit.cover),
+                  ),
+                ),
+              ),
+            ],
           ),
-          const SizedBox(height: 25.0),
-          Text(
-            aboutMe,
-            textAlign: TextAlign.center,
-            style: TextStyle(fontWeight: FontWeight.w700, fontSize: 17),
-          )
         ],
       ),
     );

@@ -8,9 +8,9 @@ class Branding extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        TitleText(string: "La cuisine d'Athena"),
+        TitleText(string: "Oiseaux de Neuchâtel"),
         const SizedBox(width: 5.0),
-        Image.asset(cupcakeLogo, height: 40, width: 40)
+        Image.asset(logo, height: 35, width: 35)
       ],
     );
   }

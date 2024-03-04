@@ -5,21 +5,20 @@ import 'package:neuchatel_birds/models/review.dart';
 import 'package:neuchatel_birds/widgets/review_card.dart';
 import 'package:neuchatel_birds/widgets/title_text.dart';
 
-class ReviewSection extends StatefulWidget {
+class HelpSection extends StatefulWidget {
   @override
-  createState() => ReviewState();
+  createState() => HelpState();
 }
 
-class ReviewState extends State<ReviewSection> {
+class HelpState extends State<HelpSection> {
   @override
   Widget build(BuildContext context) {
-    ScreenSize screenSize = MakeItResponsive().getScreenSize(context);
     Size size = MediaQuery.of(context).size;
-    double ratio = MakeItResponsive().getRatio(context);
+    double ratio = MakeItResponsive.getRatio(context);
     Size cardSize = size * ratio;
-    List<Review> reviews = [archi, moustache, fleur, leche, gourmand, dog];
-    List<ReviewCard> cards =
-        reviews.map((e) => ReviewCard(review: e, cardSize: cardSize)).toList();
+    List<Help> reviews = [help1, help2, help3, help4, help5, help6];
+    List<HelpCard> cards =
+        reviews.map((e) => HelpCard(review: e, cardSize: cardSize)).toList();
 
     return Container(
       padding: EdgeInsets.all(30.0),
@@ -28,10 +27,10 @@ class ReviewState extends State<ReviewSection> {
         children: [
           Align(
             alignment: Alignment.centerLeft,
-            child: TitleText(string: "Ils ont aimé:"),
+            child: TitleText(string: "Ils nous aident :"),
           ),
           const SizedBox(height: 7.5),
-          MakeItResponsive().responsiveRows(cards, screenSize)
+          MakeItResponsive.responsiveRows(context, cards)
         ],
       ),
     );
