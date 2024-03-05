@@ -13,7 +13,7 @@ class PhoneBar extends AppBar {
           scrolledUnderElevation: 0.0,
           shape: Border(
             bottom: BorderSide(
-              color: titleColor.withOpacity(opacity),
+              color: themeColor.withOpacity(opacity),
               width: 3.0,
             ),
           ),

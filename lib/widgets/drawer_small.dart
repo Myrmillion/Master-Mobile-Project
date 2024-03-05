@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:neuchatel_birds/constants.dart';
-import 'package:neuchatel_birds/models/button_object.dart';
 import 'package:neuchatel_birds/widgets/branding.dart';
 
 class DrawerSmall extends StatelessWidget {
@@ -16,7 +15,7 @@ class DrawerSmall extends StatelessWidget {
               child: Branding(),
             );
           } else {
-            ButtonObject button = menuButton[index - 1];
+            final button = menuDefinitions[index - 1];
             return ListTile(
               title: Text(button.text),
               contentPadding: EdgeInsets.symmetric(
@@ -35,12 +34,12 @@ class DrawerSmall extends StatelessWidget {
         },
         separatorBuilder: (_, index) {
           if (index == 0) {
-            return Divider(thickness: 2.0, height: 0, color: titleColor);
+            return Divider(thickness: 2.0, height: 0, color: themeColor);
           } else {
             return Divider(height: 0);
           }
         },
-        itemCount: menuButton.length + 1,
+        itemCount: menuDefinitions.length + 1,
       ),
     );
   }

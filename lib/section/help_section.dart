@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:neuchatel_birds/constants.dart';
 import 'package:neuchatel_birds/models/make_it_responsive.dart';
-import 'package:neuchatel_birds/models/review.dart';
-import 'package:neuchatel_birds/widgets/review_card.dart';
+import 'package:neuchatel_birds/widgets/help_card.dart';
 import 'package:neuchatel_birds/widgets/title_text.dart';
 
 class HelpSection extends StatefulWidget {
@@ -13,16 +12,13 @@ class HelpSection extends StatefulWidget {
 class HelpState extends State<HelpSection> {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    double ratio = MakeItResponsive.getRatio(context);
-    Size cardSize = size * ratio;
-    List<Help> reviews = [help1, help2, help3, help4, help5, help6];
-    List<HelpCard> cards =
-        reviews.map((e) => HelpCard(review: e, cardSize: cardSize)).toList();
+    final width = MediaQuery.of(context).size.width;
+    final ratio = MakeItResponsive.computeRatio(context);
+    final cards = helps.map((h) => HelpCard(h, width: width * ratio)).toList();
 
     return Container(
       padding: EdgeInsets.all(30.0),
-      width: size.width,
+      width: width,
       child: Column(
         children: [
           Align(
@@ -30,7 +26,7 @@ class HelpState extends State<HelpSection> {
             child: TitleText("Ils nous aident :"),
           ),
           const SizedBox(height: 7.5),
-          MakeItResponsive.responsiveRows(context, cards)
+          MakeItResponsive.buildRows(context, cards)
         ],
       ),
     );

@@ -1,45 +1,46 @@
 import 'package:flutter/material.dart';
-import 'package:neuchatel_birds/models/button_object.dart';
+import 'package:neuchatel_birds/models/btn_definition.dart';
 
 class HoverButton extends StatefulWidget {
-  final ButtonObject button;
-  HoverButton({required this.button});
+  HoverButton(this.definition);
+
+  final BtnDefinition definition;
 
   @override
   createState() => HoverState();
 }
 
 class HoverState extends State<HoverButton> {
-  bool hoverValue = false;
+  bool hovered = false;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: InkWell(
+        onTap: () => Navigator.of(context).push(
+          MaterialPageRoute(builder: (_) => widget.definition.destination),
+        ),
+        onHover: (value) => setState(() => hovered = value),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              widget.button.text,
+              widget.definition.text,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: (hoverValue) ? Colors.grey : Colors.black,
+                color: (hovered) ? Colors.grey.shade800 : Colors.black,
               ),
             ),
-            Container(
-              height: 2,
-              width: 50,
-              color: (hoverValue) ? Colors.grey : Colors.transparent,
+            Visibility.maintain(
+              visible: hovered,
+              child: Container(
+                height: 2,
+                width: 50,
+                color: Colors.grey.shade800,
+              ),
             )
           ],
         ),
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (_) => widget.button.destination),
-          );
-        },
-        onHover: (hover) => setState(() => hoverValue = hover),
       ),
     );
   }

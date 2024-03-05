@@ -14,7 +14,7 @@ class ServiceWidget extends StatefulWidget {
 class OccasionState extends State<ServiceWidget> {
   @override
   Widget build(BuildContext context) {
-    final screenSize = MakeItResponsive.getScreenSize(context);
+    final screenSize = MakeItResponsive.getSize(context);
     final size = MediaQuery.of(context).size.width;
     final radius = (screenSize == ScreenSize.phone) ? size / 4 : size / 10;
     return Column(

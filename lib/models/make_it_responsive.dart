@@ -6,24 +6,24 @@ class MakeItResponsive {
   // Attributes
 
   // Based on Bootstrap responsive breakpoints: https://kinsta.com/blog/responsive-web-design/
-  static double minPoint = 768;
-  static double maxPoint = 992;
+  static double minimum = 768;
+  static double maximum = 992;
 
-  // Methods
+  // Public Methods
 
-  static ScreenSize getScreenSize(BuildContext context) {
+  static ScreenSize getSize(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
-    if (width < minPoint) {
+    if (width < minimum) {
       return ScreenSize.phone;
-    } else if (width < maxPoint) {
+    } else if (width < maximum) {
       return ScreenSize.tablet;
     } else {
       return ScreenSize.desktop;
     }
   }
 
-  static Widget responsiveRows(BuildContext context, List<Widget> widgets) {
-    final screenSize = getScreenSize(context);
+  static Widget buildRows(BuildContext context, List<Widget> widgets) {
+    final screenSize = getSize(context);
     int maxItems = 0;
 
     switch (screenSize) {
@@ -48,6 +48,26 @@ class MakeItResponsive {
     );
   }
 
+  static double computeRatio(BuildContext context) {
+    final screenSize = getSize(context);
+    switch (screenSize) {
+      case ScreenSize.phone:
+        return 0.4;
+      case ScreenSize.tablet:
+        return 0.25;
+      case ScreenSize.desktop:
+        return 0.2;
+    }
+  }
+
+  static double computeOpacity(BuildContext context, double userPosition) {
+    final height = MediaQuery.of(context).size.height;
+    final isOpaque = (height / 2);
+    return isOpaque <= userPosition ? 1 : userPosition / isOpaque;
+  }
+
+  // Private Methods
+
   static List<List<Widget>> _toArrays(List<Widget> widgets, int maxItems) {
     List<List<Widget>> newList = [];
     int index = 0;
@@ -67,22 +87,5 @@ class MakeItResponsive {
     }
 
     return newList;
-  }
-
-  static double getRatio(BuildContext context) {
-    final screenSize = getScreenSize(context);
-    switch (screenSize) {
-      case ScreenSize.phone:
-        return 0.4;
-      case ScreenSize.tablet:
-        return 0.25;
-      case ScreenSize.desktop:
-        return 0.2;
-    }
-  }
-
-  static double getScrollingOpacity(double userPosition, double screenHeight) {
-    final isOpaque = (screenHeight / 2);
-    return isOpaque <= userPosition ? 1 : userPosition / isOpaque;
   }
 }

@@ -9,7 +9,7 @@ class TitleText extends Text {
       : super(
           string,
           style: TextStyle(
-            color: titleColor,
+            color: themeColor,
             fontWeight: FontWeight.w900,
             fontSize: 22.0,
             fontStyle: fontStyle,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:neuchatel_birds/constants.dart';
-import 'package:neuchatel_birds/models/button_object.dart';
+import 'package:neuchatel_birds/models/btn_definition.dart';
 import 'package:neuchatel_birds/pages/next_page.dart';
 import 'package:neuchatel_birds/widgets/branding.dart';
 import 'package:neuchatel_birds/widgets/hover_button.dart';
@@ -18,9 +18,9 @@ class WebBar extends PreferredSize {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Branding(),
-                ...menuButtonHover(),
+                ...menuDefinitions.map((def) => HoverButton(def)).toList(),
                 HoverButton(
-                  button: ButtonObject(text: "Log in", destination: NextPage()),
+                  BtnDefinition(text: "Log in", destination: NextPage()),
                 )
               ],
             ),
@@ -28,7 +28,7 @@ class WebBar extends PreferredSize {
               color: Colors.white,
               border: Border(
                 bottom: BorderSide(
-                  color: titleColor.withOpacity(opacity),
+                  color: themeColor.withOpacity(opacity),
                   width: 3.0,
                 ),
               ),

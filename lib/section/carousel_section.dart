@@ -54,15 +54,15 @@ class CarouselState extends State<CarouselSection> {
   @override
   Widget build(BuildContext context) {
     final items = images.map((e) => _card(e)).toList();
-    final screenSize = MakeItResponsive.getScreenSize(context);
+    final isPhone = MakeItResponsive.getSize(context) == ScreenSize.phone;
     final options = CarouselOptions(
       autoPlay: true,
-      height: screenSize == ScreenSize.phone ? 250 : 400,
       enlargeCenterPage: true,
+      height: isPhone ? 250.0 : 400.0,
       onPageChanged: (newIndex, _) => setState(() => index = newIndex),
     );
     return Container(
-      padding: EdgeInsets.all(30),
+      padding: EdgeInsets.all(30.0),
       child: Column(
         children: [
           Align(
@@ -78,47 +78,55 @@ class CarouselState extends State<CarouselSection> {
           Card(
             elevation: 2.0,
             child: Padding(
-              padding: EdgeInsets.only(top: 10, bottom: 10),
+              padding: EdgeInsets.symmetric(
+                vertical: 5.0,
+                horizontal: isPhone ? 15.0 : 25.0,
+              ),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   for (int i = 0; i < images.length; i++) ...[
-                    Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        InkWell(
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 15.0,
-                              vertical: 5.0,
-                            ),
-                            child: Text(
-                              (screenSize != ScreenSize.phone)
-                                  ? images[i].name
-                                  : (i + 1).toString(),
-                            ),
-                          ),
-                          onTap: () => _carouselController.animateToPage(i),
-                        ),
-                        Visibility(
-                          maintainAnimation: true,
-                          maintainSize: true,
-                          maintainState: true,
-                          visible: (index == i),
-                          child: AnimatedOpacity(
-                            opacity: 1,
-                            duration: Duration(milliseconds: 500),
-                            child: Container(
-                              height: 5,
-                              width: 25,
-                              decoration: BoxDecoration(
-                                color: Colors.grey,
-                                borderRadius: BorderRadius.circular(2.5),
+                    Container(
+                      margin: EdgeInsets.symmetric(
+                        horizontal: isPhone ? 10.0 : 12.5,
+                      ),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          InkWell(
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 10.0,
+                                vertical: 5.0,
+                              ),
+                              child: Text(
+                                (!isPhone)
+                                    ? images[i].name
+                                    : (i + 1).toString(),
                               ),
                             ),
+                            onTap: () => _carouselController.animateToPage(i),
                           ),
-                        )
-                      ],
+                          Visibility(
+                            maintainAnimation: true,
+                            maintainSize: true,
+                            maintainState: true,
+                            visible: (index == i),
+                            child: AnimatedOpacity(
+                              opacity: 1,
+                              duration: Duration(milliseconds: 500),
+                              child: Container(
+                                height: 5,
+                                width: 25,
+                                decoration: BoxDecoration(
+                                  color: Colors.grey,
+                                  borderRadius: BorderRadius.circular(2.5),
+                                ),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
                     )
                   ]
                 ],

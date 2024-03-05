@@ -7,7 +7,7 @@ class NextPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    ScreenSize screenSize = MakeItResponsive.getScreenSize(context);
+    ScreenSize screenSize = MakeItResponsive.getSize(context);
     return Scaffold(
       appBar:
           (screenSize == ScreenSize.phone) ? PhoneBar() : WebBar(size: size),

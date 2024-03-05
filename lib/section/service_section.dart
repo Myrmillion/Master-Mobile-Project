@@ -7,15 +7,15 @@ import 'package:neuchatel_birds/widgets/title_text.dart';
 class ServiceSection extends StatelessWidget {
   final serviceWidgets = [
     ServiceWidget(name: "Recensement des espèces", path: note),
-    const SizedBox(height: 15.0),
+    const SizedBox(height: 25.0),
     ServiceWidget(name: "Création d'habitats", path: house),
-    const SizedBox(height: 15.0),
+    const SizedBox(height: 25.0),
     ServiceWidget(name: "Découvertes en groupes", path: search),
   ];
 
   @override
   Widget build(BuildContext context) {
-    final screenSize = MakeItResponsive.getScreenSize(context);
+    final screenSize = MakeItResponsive.getSize(context);
     return Padding(
       padding: EdgeInsets.all(30),
       child: Column(

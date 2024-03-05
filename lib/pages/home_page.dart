@@ -5,7 +5,7 @@ import 'package:neuchatel_birds/section/carousel_section.dart';
 import 'package:neuchatel_birds/section/contact_section.dart';
 import 'package:neuchatel_birds/section/service_section.dart';
 import 'package:neuchatel_birds/section/quote_section.dart';
-import 'package:neuchatel_birds/section/review_section.dart';
+import 'package:neuchatel_birds/section/help_section.dart';
 import 'package:neuchatel_birds/widgets/drawer_small.dart';
 import 'package:neuchatel_birds/widgets/phone_bar.dart';
 import 'package:neuchatel_birds/section/top_stack.dart';
@@ -17,46 +17,40 @@ class HomePage extends StatefulWidget {
 }
 
 class HomeState extends State<HomePage> {
-  ScrollController _scrollController = ScrollController();
-  double _currentUserPosition = 0;
-
-  setupScrollListener() {
-    setState(() {
-      _currentUserPosition = _scrollController.position.pixels;
-    });
-  }
+  final scrollController = ScrollController();
+  double scrollPosition = 0;
 
   @override
   void initState() {
-    _scrollController.addListener(setupScrollListener);
+    scrollController.addListener(() {
+      setState(() => scrollPosition = scrollController.position.pixels);
+    });
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    ScreenSize screenSize = MakeItResponsive.getScreenSize(context);
-    double opacity = MakeItResponsive.getScrollingOpacity(
-      _currentUserPosition,
-      size.height,
-    );
+    ScreenSize screenSize = MakeItResponsive.getSize(context);
+    double opacity = MakeItResponsive.computeOpacity(context, scrollPosition);
     return Scaffold(
-      extendBodyBehindAppBar: true,
       drawer: DrawerSmall(),
       appBar: (screenSize == ScreenSize.phone)
           ? PhoneBar(opacity: opacity)
           : WebBar(size: size, opacity: opacity),
       body: SingleChildScrollView(
-        controller: _scrollController,
+        controller: scrollController,
         child: Column(
           children: [
             TopStack(),
             ServiceSection(),
-            Divider(color: Colors.black, thickness: 2.0),
+            Divider(color: Colors.black, thickness: 2.5),
             AboutMeSection(),
-            Divider(color: Colors.black, thickness: 2.0),
+            Divider(color: Colors.black, thickness: 2.5),
             CarouselSection(),
+            Divider(color: Colors.black, thickness: 2.5),
             QuoteSection(),
+            Divider(color: Colors.black, thickness: 2.5),
             HelpSection(),
             ContactSection()
           ],

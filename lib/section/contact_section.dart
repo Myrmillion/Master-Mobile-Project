@@ -11,9 +11,8 @@ class ContactSection extends StatelessWidget {
       width: size.width,
       padding: EdgeInsets.symmetric(vertical: 20.0),
       child: Column(
-        mainAxisSize: MainAxisSize.max,
         children: [
-          TitleText("Nous retrouvez :"),
+          TitleText("Pour nous retrouver :"),
           const SizedBox(height: 20.0),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
