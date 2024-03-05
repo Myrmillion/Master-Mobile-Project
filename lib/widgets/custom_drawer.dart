@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:neuchatel_birds/constants.dart';
 import 'package:neuchatel_birds/widgets/branding.dart';
 
-class DrawerSmall extends StatelessWidget {
+class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -15,7 +15,7 @@ class DrawerSmall extends StatelessWidget {
               child: Branding(),
             );
           } else {
-            final button = menuDefinitions[index - 1];
+            final button = menuInfo[index - 1];
             return ListTile(
               title: Text(button.text),
               contentPadding: EdgeInsets.symmetric(
@@ -39,7 +39,7 @@ class DrawerSmall extends StatelessWidget {
             return Divider(height: 0);
           }
         },
-        itemCount: menuDefinitions.length + 1,
+        itemCount: menuInfo.length + 1,
       ),
     );
   }

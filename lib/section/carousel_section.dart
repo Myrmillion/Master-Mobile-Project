@@ -13,8 +13,8 @@ class CarouselSection extends StatefulWidget {
 class CarouselState extends State<CarouselSection> {
   int index = 0;
 
-  CarouselController _carouselController = CarouselController();
-  List<CarouselImage> images = [
+  final controller = CarouselController();
+  final images = [
     CarouselImage(name: "Busard", path: busard),
     CarouselImage(name: "Faucon", path: crecerelle),
     CarouselImage(name: "Grand Tétras", path: tetras),
@@ -23,7 +23,7 @@ class CarouselState extends State<CarouselSection> {
     CarouselImage(name: "Merle", path: merle),
   ];
 
-  Widget _card(CarouselImage image) {
+  Widget _buildItems(CarouselImage image) {
     return Container(
       child: Center(
         child: Container(
@@ -53,7 +53,6 @@ class CarouselState extends State<CarouselSection> {
 
   @override
   Widget build(BuildContext context) {
-    final items = images.map((e) => _card(e)).toList();
     final isPhone = MakeItResponsive.getSize(context) == ScreenSize.phone;
     final options = CarouselOptions(
       autoPlay: true,
@@ -71,9 +70,9 @@ class CarouselState extends State<CarouselSection> {
           ),
           const SizedBox(height: 10.0),
           CarouselSlider(
-            items: items,
+            items: images.map((img) => _buildItems(img)).toList(),
             options: options,
-            carouselController: _carouselController,
+            carouselController: controller,
           ),
           Card(
             elevation: 2.0,
@@ -93,6 +92,7 @@ class CarouselState extends State<CarouselSection> {
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
+                          // Bird name or number
                           InkWell(
                             child: Padding(
                               padding: const EdgeInsets.symmetric(
@@ -105,12 +105,10 @@ class CarouselState extends State<CarouselSection> {
                                     : (i + 1).toString(),
                               ),
                             ),
-                            onTap: () => _carouselController.animateToPage(i),
+                            onTap: () => controller.animateToPage(i),
                           ),
-                          Visibility(
-                            maintainAnimation: true,
-                            maintainSize: true,
-                            maintainState: true,
+                          // Selection indicator
+                          Visibility.maintain(
                             visible: (index == i),
                             child: AnimatedOpacity(
                               opacity: 1,

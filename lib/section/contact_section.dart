@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:neuchatel_birds/widgets/title_text.dart';
-import 'package:neuchatel_birds/widgets/url_button.dart';
+import 'package:neuchatel_birds/widgets/launch_button.dart';
 
 class ContactSection extends StatelessWidget {
   @override
@@ -28,12 +28,13 @@ class ContactSection extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 7.5),
-                  UrlButton(name: "Facebook", url: "https://www.facebook.com"),
-                  UrlButton(
+                  LaunchButton(
+                      name: "Facebook", url: "https://www.facebook.com"),
+                  LaunchButton(
                     name: "Instagram",
                     url: "https://www.instagram.com",
                   ),
-                  UrlButton(name: "Twitter", url: "https://www.twitter.com"),
+                  LaunchButton(name: "Twitter", url: "https://www.twitter.com"),
                 ],
               ),
               Column(
@@ -46,11 +47,11 @@ class ContactSection extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 7.5),
-                  UrlButton(
+                  LaunchButton(
                     name: "mail: oiseaux@neuchatel.ch",
                     url: "mailto:oiseaux@neuchatel.ch",
                   ),
-                  UrlButton(
+                  LaunchButton(
                     name: "tel: 078/891.05.28",
                     url: "tel:0788910528",
                   ),

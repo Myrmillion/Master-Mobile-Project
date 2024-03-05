@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:neuchatel_birds/models/btn_definition.dart';
 
-class HoverButton extends StatefulWidget {
-  HoverButton(this.definition);
+class CustomButton extends StatefulWidget {
+  CustomButton(this.definition);
 
-  final BtnDefinition definition;
+  final BtnInfo definition;
 
   @override
   createState() => HoverState();
 }
 
-class HoverState extends State<HoverButton> {
+class HoverState extends State<CustomButton> {
   bool hovered = false;
 
   @override

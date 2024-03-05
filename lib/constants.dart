@@ -34,29 +34,32 @@ const helpImg4 = "assets/img/content/help4.jpg";
 const helpImg5 = "assets/img/content/help5.jpg";
 const helpImg6 = "assets/img/content/help6.jpg";
 
-//Buttons
+// Buttons information
 
-final menuDefinitions = [
-  BtnDefinition(text: "Littoral"),
-  BtnDefinition(text: "Montagnes"),
-  BtnDefinition(text: "Forum")
+final menuInfo = [
+  BtnInfo(text: "Littoral"),
+  BtnInfo(text: "Montagnes"),
+  BtnInfo(text: "Forum")
 ];
 
-final quickDefinitions = [
-  BtnDefinition(text: "Newsletter", icon: Icon(Icons.newspaper)),
-  BtnDefinition(text: "Faire un don", icon: Icon(Icons.payments)),
-  BtnDefinition(text: "Shop", icon: Icon(Icons.storefront))
+final quickInfo = [
+  BtnInfo(text: "Newsletter", icon: Icon(Icons.newspaper)),
+  BtnInfo(text: "Faire un don", icon: Icon(Icons.payments)),
+  BtnInfo(text: "Shop", icon: Icon(Icons.storefront))
 ];
 
-//AboutMe
+// About me
+
 const aboutMe =
     "Habitant de Neuchâtel, je suis passionné par les oiseaux de notre région. J'ai créé ce site pour partager ma passion avec vous. N'hésitez pas à me contacter pour toute question ou suggestion.";
 
-//Quote
+// Quote
+
 const quote = "❝ Même quand l'oiseau marche, on sent qu'il a des ailes. ❞";
 const author = "— Antoine-Marin Lemierre";
 
-//Review
+// Helps
+
 final help1 = Help(
   name: "Sandrine",
   image: helpImg1,

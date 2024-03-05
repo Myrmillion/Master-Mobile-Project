@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:neuchatel_birds/constants.dart';
 import 'package:neuchatel_birds/models/make_it_responsive.dart';
-import 'package:neuchatel_birds/widgets/hover_button.dart';
+import 'package:neuchatel_birds/widgets/custom_button.dart';
 
 class QuickAccess extends StatelessWidget {
   @override
@@ -17,7 +17,7 @@ class QuickAccess extends StatelessWidget {
   Widget _buildSmall(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: quickDefinitions
+      children: quickInfo
           .map(
             (btn) => FloatingActionButton(
               onPressed: () => Navigator.of(context).push(
@@ -38,8 +38,8 @@ class QuickAccess extends StatelessWidget {
         clipBehavior: Clip.antiAlias,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: quickDefinitions
-              .map((def) => Expanded(child: HoverButton(def)))
+          children: quickInfo
+              .map((def) => Expanded(child: CustomButton(def)))
               .toList(),
         ),
       ),

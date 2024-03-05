@@ -6,9 +6,9 @@ import 'package:neuchatel_birds/section/contact_section.dart';
 import 'package:neuchatel_birds/section/service_section.dart';
 import 'package:neuchatel_birds/section/quote_section.dart';
 import 'package:neuchatel_birds/section/help_section.dart';
-import 'package:neuchatel_birds/widgets/drawer_small.dart';
+import 'package:neuchatel_birds/widgets/custom_drawer.dart';
 import 'package:neuchatel_birds/widgets/phone_bar.dart';
-import 'package:neuchatel_birds/section/top_stack.dart';
+import 'package:neuchatel_birds/section/header_section.dart';
 import 'package:neuchatel_birds/widgets/web_bar.dart';
 
 class HomePage extends StatefulWidget {
@@ -34,7 +34,7 @@ class HomeState extends State<HomePage> {
     ScreenSize screenSize = MakeItResponsive.getSize(context);
     double opacity = MakeItResponsive.computeOpacity(context, scrollPosition);
     return Scaffold(
-      drawer: DrawerSmall(),
+      drawer: CustomDrawer(),
       appBar: (screenSize == ScreenSize.phone)
           ? PhoneBar(opacity: opacity)
           : WebBar(size: size, opacity: opacity),
@@ -42,7 +42,7 @@ class HomeState extends State<HomePage> {
         controller: scrollController,
         child: Column(
           children: [
-            TopStack(),
+            HeaderSection(),
             ServiceSection(),
             Divider(color: Colors.black, thickness: 2.5),
             AboutMeSection(),

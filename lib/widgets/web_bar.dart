@@ -3,7 +3,7 @@ import 'package:neuchatel_birds/constants.dart';
 import 'package:neuchatel_birds/models/btn_definition.dart';
 import 'package:neuchatel_birds/pages/next_page.dart';
 import 'package:neuchatel_birds/widgets/branding.dart';
-import 'package:neuchatel_birds/widgets/hover_button.dart';
+import 'package:neuchatel_birds/widgets/custom_button.dart';
 
 class WebBar extends PreferredSize {
   final Size size;
@@ -18,9 +18,9 @@ class WebBar extends PreferredSize {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Branding(),
-                ...menuDefinitions.map((def) => HoverButton(def)).toList(),
-                HoverButton(
-                  BtnDefinition(text: "Log in", destination: NextPage()),
+                ...menuInfo.map((def) => CustomButton(def)).toList(),
+                CustomButton(
+                  BtnInfo(text: "Log in", destination: NextPage()),
                 )
               ],
             ),

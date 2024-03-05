@@ -3,7 +3,7 @@ import 'package:neuchatel_birds/constants.dart';
 import 'package:neuchatel_birds/models/make_it_responsive.dart';
 import 'package:neuchatel_birds/widgets/quick_access.dart';
 
-class TopStack extends StatelessWidget {
+class HeaderSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(

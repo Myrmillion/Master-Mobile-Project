@@ -26,7 +26,7 @@ class ServiceSection extends StatelessWidget {
           ),
           const SizedBox(height: 15.0),
           if (screenSize == ScreenSize.phone) ...[
-            Column(children: serviceWidgets)
+            SizedBox(child: Column(children: serviceWidgets))
           ] else ...[
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
