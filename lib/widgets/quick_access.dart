@@ -4,7 +4,15 @@ import 'package:neuchatel_birds/models/make_it_responsive.dart';
 import 'package:neuchatel_birds/widgets/custom_button.dart';
 
 // TODO 2.6 !
-// Expliquer.
+// Ce widget permet de donner accès rapidement à des fonctionnalités de
+// l'application. L'intérêt de ce widget, est qu'il  change complétement le
+// style visuel des accès en fonction du type d'appareil utilisé :
+//
+// - Sur le web, les boutons sont affichés sous forme de textes cliquables.
+// - Sur les téléphones, les boutons sont affichés sous forme d'icônes cliquables.
+//
+// Consultez donc cette classe pour voir comment elle est construite et comment
+// elle s'adapte au type d'appareil utilisé.
 
 class QuickAccess extends StatelessWidget {
   @override

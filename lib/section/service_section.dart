@@ -26,15 +26,14 @@ class ServiceSection extends StatelessWidget {
           ),
           const SizedBox(height: 15.0),
           // TODO 2.5 !
+          // Le but est ici d'agencer les services (servicesWidgets) en fonction
+          // du type d'appareil utilisé. Voir les instructions ci-dessous.
           if (screenSize == ScreenSize.phone) ...[
-            // Expliquer.
-            Column(children: serviceWidgets)
+            // 1. Afficher les services verticalement.
+            //    Hint : Column.
           ] else ...[
-            // Expliquer.
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: serviceWidgets,
-            )
+            // 2. Afficher les services horizontalement et les espacer équitablement.
+            //    Hint : Row.
           ],
         ],
       ),

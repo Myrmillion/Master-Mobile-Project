@@ -17,8 +17,8 @@ environment:
 # - icons_launcher pour générer les icônes de l'application (favicon, icône Android, icône iOS, même PWA)
 #
 # Comme pour beaucoup de technologies, il est inutile de réinventer la roue. C'est d'autant
-# plus vrai encore pour Flutter dont la réalisation de certaines tâches seraient trop complexes
-# à réaliser soi-même (ex. accéder et utiliser les capteurs du téléphone).
+# plus vrai pour Flutter dont la réalisation de certaines tâches seraient véritablement trop
+# compleyxes à réaliser soi-même (ex. accéder et utiliser les capteurs du téléphone).
 #
 # Pour plus d'informations, consultez les plugins sur : https://pub.dev/ !
 #

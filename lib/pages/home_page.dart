@@ -31,6 +31,16 @@ class HomeState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     // TODO 1.0 !
+    // À chaque changement de l'écran (dimension, orientation, scrolling, ...),
+    // tous les widgets sont redessinés. C'est grâce à ce fonctionnement qu'il
+    // est possible de rendre l'application responsive.
+    //
+    // Pour visualiser ce comportement :
+    // 1. Lancer l'application sur Chrome.
+    // 2. Redimensionner la fenêtre, scroller sur la page, ... et observer dans
+    // la console que la page est alors redessinée.
+    // 3. Vous pouvez maintenant commenter ce print.
+    //
     print("[HomePage] Rebuilt at any change.");
 
     Size size = MediaQuery.of(context).size;
@@ -39,7 +49,8 @@ class HomeState extends State<HomePage> {
     return Scaffold(
       drawer: CustomDrawer(),
       // TODO 2.3 !
-      // Expliquer.
+      // Sélectionner la bonne appBar (PhoneBar ou WebBar) en fonction du type
+      // de l'appareil qui est utilisé.
       appBar: (screenSize == ScreenSize.phone) ? null : null,
       // Info : Desktop et Tablet sont considérés comme "Web".
       body: SingleChildScrollView(

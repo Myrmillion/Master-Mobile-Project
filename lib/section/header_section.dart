@@ -6,6 +6,14 @@ import 'package:neuchatel_birds/widgets/quick_access.dart';
 class HeaderSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // TODO 1.1 !
+    // Toujours la même chose, mais pour montrer que réellement tous les widgets
+    // sont redessinés, à chaque changement de l'écran. Même si ce widget n'est
+    // pas directement affecté et/ou qu'il est est Stateless.
+    //
+    // Observer la console aux changements, puis commenter ce print.
+    //
+    print("[HeaderSection] Rebuilt at any change.");
     return Stack(
       children: [
         _buildBackground(MediaQuery.of(context).size.height),

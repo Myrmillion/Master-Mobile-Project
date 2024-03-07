@@ -1,10 +1,27 @@
 import 'package:flutter/material.dart';
 
 // TODO 2.0 !
-// Expliquer le but de cette classe.
+// Le but de cette classe est de faciliter la création d'une application qui
+// soit responsive. En effet, avec Flutter, sur les applications mobiles, c'est
+// un travail relativement "simple". Du moment qu'on travaille avec des Widgets
+// adaptées tels que des "Column", "Row", "Expanded" ou "Flexible", cela suffit.
+//
+// En revanche, en prenant également en charge le web, l'utilisastion de ces
+// Widget (bien qu'essentielle) ne suffit plus car la différence de taille entre
+// les écrans est trop importantes. L'agencement ainsi que le comportement de
+// l'application doivent désormais être adaptés aussi.
+//
+// Il n'y a pas de solution standard pour concevoir des applications responsives
+// aussi bienpour le mobile et le web en FLutter, mais celle qui est proposée
+// est une bonne base pour commencer.
 
 // TODO 2.2 !
-// Regarder le reste.
+// La méthode getSize() est la plus importante et la plus utilisée dans cette
+// application, dont l'utilisation sera montré dans les TODOs 2.x suivant.
+
+// Les autres méthodes sont plus dédiées à des fonctionnalités spécifiques de
+// l'application. Passez-les rapidement en revue pour voir à quoi elles servent,
+// mais ne ce ne sont pas les plus importantes.
 
 enum ScreenSize { phone, tablet, desktop }
 
@@ -19,7 +36,7 @@ class MakeItResponsive {
 
   static ScreenSize getSize(BuildContext context) {
     // TODO 2.1 !
-    // Expliquer.
+    // Récupérer la largeur de l'écran pour déterminer le type d'appareil.
     final width = 0;
     // Hint : Utiliser "MediaQuery".
 
