@@ -1,9 +1,6 @@
 class CarouselImage {
-  String name;
-  String path;
+  CarouselImage({required this.name, required this.path});
 
-  CarouselImage({
-    required this.name,
-    required this.path,
-  });
+  final String name;
+  final String path;
 }

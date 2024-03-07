@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:neuchatel_birds/models/btn_definition.dart';
-import 'package:neuchatel_birds/models/review.dart';
+import 'package:neuchatel_birds/models/help.dart';
 
 // Colors
 

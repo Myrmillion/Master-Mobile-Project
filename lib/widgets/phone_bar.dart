@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:neuchatel_birds/constants.dart';
 import 'package:neuchatel_birds/widgets/branding.dart';
 
+/// The app bar for phone screens.
+/// Does extend [AppBar] in order to display the drawer button.
 class PhoneBar extends AppBar {
   final double opacity;
 

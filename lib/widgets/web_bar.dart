@@ -5,6 +5,8 @@ import 'package:neuchatel_birds/pages/next_page.dart';
 import 'package:neuchatel_birds/widgets/branding.dart';
 import 'package:neuchatel_birds/widgets/custom_button.dart';
 
+/// The app bar for web screens.
+/// Does not extend [AppBar] because the drawer button is not desired.
 class WebBar extends PreferredSize {
   final Size size;
   final double opacity;

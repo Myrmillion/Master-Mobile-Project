@@ -60,6 +60,40 @@ class CarouselState extends State<CarouselSection> {
       height: isPhone ? 250.0 : 400.0,
       onPageChanged: (newIndex, _) => setState(() => index = newIndex),
     );
+
+    buildNameOrNumber(int i) {
+      return InkWell(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 10.0,
+            vertical: 5.0,
+          ),
+          child: Text(
+            (!isPhone) ? images[i].name : (i + 1).toString(),
+          ),
+        ),
+        onTap: () => controller.animateToPage(i),
+      );
+    }
+
+    buildSelectIndicator(int i) {
+      return Visibility.maintain(
+        visible: (index == i),
+        child: AnimatedOpacity(
+          opacity: 1,
+          duration: Duration(milliseconds: 500),
+          child: Container(
+            height: 5,
+            width: 25,
+            decoration: BoxDecoration(
+              color: Colors.grey,
+              borderRadius: BorderRadius.circular(2.5),
+            ),
+          ),
+        ),
+      );
+    }
+
     return Container(
       padding: EdgeInsets.all(30.0),
       child: Column(
@@ -92,37 +126,8 @@ class CarouselState extends State<CarouselSection> {
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          // Bird name or number
-                          InkWell(
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 10.0,
-                                vertical: 5.0,
-                              ),
-                              child: Text(
-                                (!isPhone)
-                                    ? images[i].name
-                                    : (i + 1).toString(),
-                              ),
-                            ),
-                            onTap: () => controller.animateToPage(i),
-                          ),
-                          // Selection indicator
-                          Visibility.maintain(
-                            visible: (index == i),
-                            child: AnimatedOpacity(
-                              opacity: 1,
-                              duration: Duration(milliseconds: 500),
-                              child: Container(
-                                height: 5,
-                                width: 25,
-                                decoration: BoxDecoration(
-                                  color: Colors.grey,
-                                  borderRadius: BorderRadius.circular(2.5),
-                                ),
-                              ),
-                            ),
-                          )
+                          buildNameOrNumber(i),
+                          buildSelectIndicator(i),
                         ],
                       ),
                     )

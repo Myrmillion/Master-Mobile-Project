@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:neuchatel_birds/models/review.dart';
+import 'package:neuchatel_birds/models/help.dart';
 
 class HelpCard extends StatefulWidget {
   HelpCard(this.help, {required this.width});

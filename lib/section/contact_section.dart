@@ -29,12 +29,17 @@ class ContactSection extends StatelessWidget {
                   ),
                   const SizedBox(height: 7.5),
                   LaunchButton(
-                      name: "Facebook", url: "https://www.facebook.com"),
+                    name: "Facebook",
+                    url: "https://www.facebook.com",
+                  ),
                   LaunchButton(
                     name: "Instagram",
                     url: "https://www.instagram.com",
                   ),
-                  LaunchButton(name: "Twitter", url: "https://www.twitter.com"),
+                  LaunchButton(
+                    name: "Twitter",
+                    url: "https://www.twitter.com",
+                  ),
                 ],
               ),
               Column(
