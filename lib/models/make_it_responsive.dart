@@ -6,8 +6,8 @@ class MakeItResponsive {
   // Attributes
 
   // Based on Bootstrap responsive breakpoints: https://kinsta.com/blog/responsive-web-design/
-  static double minimum = 768;
-  static double maximum = 992;
+  static final double minimum = 768;
+  static final double maximum = 992;
 
   // Public Methods
 

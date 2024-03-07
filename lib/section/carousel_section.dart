@@ -68,9 +68,7 @@ class CarouselState extends State<CarouselSection> {
             horizontal: 10.0,
             vertical: 5.0,
           ),
-          child: Text(
-            (!isPhone) ? images[i].name : (i + 1).toString(),
-          ),
+          child: Text(isPhone ? (i + 1).toString() : images[i].name),
         ),
         onTap: () => controller.animateToPage(i),
       );
