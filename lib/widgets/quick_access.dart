@@ -8,30 +8,31 @@ class QuickAccess extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final isPhone = MakeItResponsive.getSize(context) == ScreenSize.phone;
+
+    Widget buildIcons() {
+      return Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: quickInfo
+            .map(
+              (btn) => FloatingActionButton(
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => btn.destination),
+                ),
+                child: btn.icon,
+                heroTag: btn.text,
+              ),
+            )
+            .toList(),
+      );
+    }
+
     return SizedBox(
       width: (isPhone) ? width / 1.25 : width / 1.5,
-      child: (isPhone) ? _buildSmall(context) : _buildBig(),
+      child: (isPhone) ? buildIcons() : _buildTexts(),
     );
   }
 
-  Widget _buildSmall(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: quickInfo
-          .map(
-            (btn) => FloatingActionButton(
-              onPressed: () => Navigator.of(context).push(
-                MaterialPageRoute(builder: (_) => btn.destination),
-              ),
-              child: btn.icon,
-              heroTag: btn.text,
-            ),
-          )
-          .toList(),
-    );
-  }
-
-  Widget _buildBig() {
+  Widget _buildTexts() {
     return Container(
       height: 40,
       child: Card(
