@@ -30,14 +30,18 @@ class HomeState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    // TODO 1.0 !
+    print("[HomePage] Rebuilt at any change.");
+
     Size size = MediaQuery.of(context).size;
     ScreenSize screenSize = MakeItResponsive.getSize(context);
     double opacity = MakeItResponsive.computeOpacity(context, scrollPosition);
     return Scaffold(
       drawer: CustomDrawer(),
-      appBar: (screenSize == ScreenSize.phone)
-          ? PhoneBar(opacity: opacity)
-          : WebBar(size: size, opacity: opacity),
+      // TODO 2.3 !
+      // Expliquer.
+      appBar: (screenSize == ScreenSize.phone) ? null : null,
+      // Info : Desktop et Tablet sont considérés comme "Web".
       body: SingleChildScrollView(
         controller: scrollController,
         child: Column(

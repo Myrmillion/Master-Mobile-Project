@@ -3,6 +3,9 @@ import 'package:neuchatel_birds/constants.dart';
 import 'package:neuchatel_birds/models/make_it_responsive.dart';
 import 'package:neuchatel_birds/widgets/custom_button.dart';
 
+// TODO 2.6 !
+// Expliquer.
+
 class QuickAccess extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

@@ -5,6 +5,9 @@ import 'package:neuchatel_birds/widgets/title_text.dart';
 class Branding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // TODO 1.1 !
+    print("[HomePage] Rebuilt at any change.");
+
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [

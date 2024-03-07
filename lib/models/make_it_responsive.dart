@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 
+// TODO 2.0 !
+// Expliquer le but de cette classe.
+
+// TODO 2.2 !
+// Regarder le reste.
+
 enum ScreenSize { phone, tablet, desktop }
 
 class MakeItResponsive {
@@ -12,7 +18,11 @@ class MakeItResponsive {
   // Public Methods
 
   static ScreenSize getSize(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
+    // TODO 2.1 !
+    // Expliquer.
+    final width = 0;
+    // Hint : Utiliser "MediaQuery".
+
     if (width < minimum) {
       return ScreenSize.phone;
     } else if (width < maximum) {

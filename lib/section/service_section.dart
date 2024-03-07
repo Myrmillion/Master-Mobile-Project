@@ -25,9 +25,12 @@ class ServiceSection extends StatelessWidget {
             child: TitleText("Nos prestations :"),
           ),
           const SizedBox(height: 15.0),
+          // TODO 2.5 !
           if (screenSize == ScreenSize.phone) ...[
+            // Expliquer.
             Column(children: serviceWidgets)
           ] else ...[
+            // Expliquer.
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: serviceWidgets,
