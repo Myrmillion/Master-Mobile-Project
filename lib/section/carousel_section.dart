@@ -68,7 +68,10 @@ class CarouselState extends State<CarouselSection> {
             horizontal: 10.0,
             vertical: 5.0,
           ),
-          child: Text(isPhone ? (i + 1).toString() : images[i].name),
+          // TODO 2.4 !
+          // En fonction du type d'appareil, afficher le numéro d'index (phone)
+          // ou le nom nom complet de l'oiseau (autres).
+          child: Text(isPhone ? 'todo' : 'todo'),
         ),
         onTap: () => controller.animateToPage(i),
       );

@@ -8,12 +8,26 @@ version: 1.0.0+1
 environment:
   sdk: ^3.0.0
 
+# TODO 4.0 !
+# L'objectif est ici juste de comprendre quelque chose d'important dans Flutter.
+# En plus des icônes cupertino, l'application dépend de 3 plugins :
+#
+# - url_launcher pour ouvrir des liens dans le navigateur
+# - carousel_slider pour afficher des images en carrousel
+# - icons_launcher pour générer les icônes de l'application (favicon, icône Android, icône iOS, même PWA)
+#
+# Comme pour beaucoup de technologies, il est inutile de réinventer la roue. C'est d'autant
+# plus vrai encore pour Flutter dont la réalisation de certaines tâches seraient trop complexes
+# à réaliser soi-même (ex. accéder et utiliser les capteurs du téléphone).
+#
+# Pour plus d'informations, consultez les plugins sur : https://pub.dev/ !
+#
 dependencies:
   flutter:
     sdk: flutter
-  carousel_slider: ^4.0.0
-  url_launcher: ^6.0.0
   cupertino_icons: ^1.0.2
+  url_launcher: ^6.0.0
+  carousel_slider: ^4.0.0
   icons_launcher: ^2.1.7
 
 dev_dependencies:
