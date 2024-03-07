@@ -39,7 +39,10 @@ class MakeItResponsive {
     // Récupérer la largeur de l'écran pour déterminer le type d'appareil.
     final width = 0;
     // Hint : Utiliser "MediaQuery".
-
+    // Info : Il serait tout à fait possible d'utiliser les utilitaires de
+    // Flutter tels que Platform.isAndroid, Platform.isIOS ou encore kIsWeb pour
+    // reconnaître la nature de l'appareil. Cependant l'idée est ici de montrer
+    // l'utiilisation des dimmensions de l'écran.
     if (width < minimum) {
       return ScreenSize.phone;
     } else if (width < maximum) {
