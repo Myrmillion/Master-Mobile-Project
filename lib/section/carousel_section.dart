@@ -58,7 +58,7 @@ class CarouselState extends State<CarouselSection> {
       autoPlay: true,
       enlargeCenterPage: true,
       height: isPhone ? 250.0 : 400.0,
-      onPageChanged: (newIndex, _) => setState(() => index = newIndex),
+      onPageChanged: (value, _) => setState(() => index = value),
     );
 
     buildNameOrNumber(int i) {

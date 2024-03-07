@@ -11,9 +11,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  url_launcher: ^6.0.0
   carousel_slider: ^4.0.0
-
+  url_launcher: ^6.0.0
   cupertino_icons: ^1.0.2
   icons_launcher: ^2.1.7
 
@@ -27,7 +26,7 @@ icons_launcher:
     android:
       enable: true
       image_path: "assets/img/icon/fore-sm_bg.png"
-      adaptive_background_color: '#ffffff'
+      adaptive_background_color: "#ffffff"
       adaptive_foreground_image: "assets/img/icon/fore-sm.png"
     ios:
       enable: true

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:neuchatel_birds/constants.dart';
-import 'package:neuchatel_birds/models/btn_definition.dart';
+import 'package:neuchatel_birds/models/btn_info.dart';
 import 'package:neuchatel_birds/pages/next_page.dart';
 import 'package:neuchatel_birds/widgets/branding.dart';
 import 'package:neuchatel_birds/widgets/custom_button.dart';
@@ -21,9 +21,7 @@ class WebBar extends PreferredSize {
               children: [
                 Branding(),
                 ...menuInfo.map((def) => CustomButton(def)).toList(),
-                CustomButton(
-                  BtnInfo(text: "Log in", destination: NextPage()),
-                )
+                CustomButton(BtnInfo(text: "Log in", destination: NextPage()))
               ],
             ),
             decoration: BoxDecoration(

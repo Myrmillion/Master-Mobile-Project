@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:neuchatel_birds/models/btn_definition.dart';
+import 'package:neuchatel_birds/models/btn_info.dart';
 
 class CustomButton extends StatefulWidget {
   CustomButton(this.definition);
