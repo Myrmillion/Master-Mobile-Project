@@ -1,13 +1,6 @@
 {
-    "name": "Oiseaux de Neuchâtel",
     "short_name": "Oiseaux de Neuchâtel",
-    "start_url": "https://myrmillion.github.io/",
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#ffffff",
-    "description": "A simple sample app about birds in Neuchatel, to show the usage of Flutter Web.",
-    "orientation": "portrait-primary",
-    "prefer_related_applications": false,
+    "name": "Oiseaux de Neuchâtel: Les oiseaux de nos régions !",
     "icons": [
         {
             "src": "icons/Icon-192.png",
@@ -31,5 +24,12 @@
             "type": "image/png",
             "purpose": "maskable"
         }
-    ]
+    ],
+    "id": "/",
+    "start_url": "/",
+    "background_color": "#c16218",
+    "display": "standalone",
+    "theme_color": "#c16218",
+    "description": "A simple sample app about birds in Neuchatel, to show the usage of Flutter Web.",
+    "orientation": "portrait-primary"
 }
