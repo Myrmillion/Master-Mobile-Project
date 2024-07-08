@@ -15,3 +15,5 @@ Typically, throughout this application, the following concepts are being explore
   - `Drawer`, `AppBar`, `MediaQuery` and more ;
   - A few plugins found on the official [**pub.dev**](https://pub.dev/) platform (`carousel_slider` & `url_launcher`) ;
   - And more.
+
+The app has been deployed with GitHub Pages and is accessible at the following link : [**https://myrmillion.github.io**](https://myrmillion.github.io/).
