@@ -2,15 +2,16 @@
 
 A simple sample app about birds in Neuchatel, to show the usage of Flutter Web.
 
-## Getting Started
+<div align="center">
+  <img src="https://github.com/Myrmillion/Neuchatel-Birds/assets/1577282/90a3af94-62d6-4c87-8348-31c5361b79c8" width="200" height="200" />
+</div>
 
-This project is a starting point for a Flutter application.
+Typically, throughout this application, the following concepts are being explored and used :
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- A utility class dedicated to helping making the app responsive ;
+- Usage of the `manifest.json` file in order to configure the produced web app ;
+- Usage of some interesting concepts and widgets in Flutter :
+  - Material Design 3 ;
+  - `Drawer`, `AppBar`, `MediaQuery` and more ;
+  - A few plugins found on the official [**pub.dev**](https://pub.dev/) platform (`carousel_slider` & `url_launcher`) ;
+  - And more.
